@@ -22,7 +22,6 @@ class ProductController extends Controller
     {
         //
         $categoryMenu = Category::orderBy('category_name', 'asc')->get();
-        $data = Auth::user()->product();
         $products = Product::where('user_id', auth()->id())->orderBy('id', 'desc')->paginate(5);
         //$products = Product::orderBy('id', 'desc');
         return view('admin.products', compact('products', 'categoryMenu'));
@@ -51,7 +50,8 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
-        $this->validate($request,
+        $this->validate(
+            $request,
             [
                 "category_id" => "required",
                 "product_name" => "required",
@@ -61,7 +61,8 @@ class ProductController extends Controller
                 "address" => "required",
                 "maps" => "required",
                 "img" => "required"
-            ]);
+            ]
+        );
 
 
         //$input = $request->only('category_id', 'product_name', 'product_detail', 'email', 'phone', 'address', 'maps');
@@ -72,7 +73,7 @@ class ProductController extends Controller
         $input['email'] = $request['email'];
         $input['phone'] = $request['phone'];
         $input['address'] = $request['address'];
-         $input['maps'] = $request['maps'];
+        $input['maps'] = $request['maps'];
 
         $product = Product::create($input);
 
@@ -138,12 +139,14 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $this->validate($request,
+        $this->validate(
+            $request,
             [
 
                 "product_detail" => "required"
 
-            ]);
+            ]
+        );
         $input = $request->only('category_id', 'product_name', 'product_detail', 'email', 'phone', 'address', 'maps');
         $products = Product::find($id);
         $products->update($input);
@@ -161,7 +164,6 @@ class ProductController extends Controller
                 }
 
                 $imgs[] = $image_name;
-
             }
         }
 
@@ -191,7 +193,5 @@ class ProductController extends Controller
         Session::flash("status", 1);
 
         return redirect()->route('admin-products.index');
-
-
     }
 }
