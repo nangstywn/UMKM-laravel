@@ -16,16 +16,15 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-select.min.css') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css" rel="stylesheet"
         type="text/css">
-    <link href="{{ secure_asset('assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css')}}" rel="stylesheet"
+    <link href="{{ asset('assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css')}}" rel="stylesheet"
         type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css') }}">
     <link rel="stylesheet" type="text/css"
-        href="{{ secure_asset('assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css') }}">
-    <link rel="stylesheet" type="text/css"
-        href="{{ secure_asset('assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset('assets/plugins/OwlCarousel2-2.2.1/animate.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset('assets/styles/mai_styles.css') }}">
+        href="{{ asset('assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/OwlCarousel2-2.2.1/animate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/mai_styles.css') }}">
 
-    <link rel="stylesheet" type="text/css" href="{{ secure_asset('assets/styles/responsive.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/responsive.css') }}">
     <link href="{{asset("assets/styles/toastr.min.css")}}" rel="stylesheet">
 
 
