@@ -8,5 +8,17 @@
 5. With `php artisan migrate` command, create the tables.
 6. `php artisan db:seed` method to run other seed classes.
 
+# Demo
+Visit Link : https://umkm-app.herokuapp.com/
+
+# Screenshot
+  ### Landing Page
+<img src="https://github.com/NangStywn/UMKM-laravel/blob/img/umkm1.png"/>
+
+  ### Avalaible Product by Categories
+<img src="https://github.com/NangStywn/UMKM-laravel/blob/img/umkm2.png"/>
+
+  ### Detail Product
+<img src="https://github.com/NangStywn/UMKM-laravel/blob/img/umkm3.png"/>
 
 
