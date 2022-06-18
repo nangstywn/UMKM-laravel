@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,12 +21,12 @@ Route::get('/contact', 'HomeController@contact')->name('contact');
 Route::get('/category/{slug}', 'HomeController@category')->name('category');
 Route::get('/product/{slug}', 'HomeController@product')->name('product');
 
-Route::get('logout','Auth\LoginController@logout');
-Route::resource("admin-products","ProductController");
-Route::resource("admin-users","Admin\UsersController");
-Route::resource("admin-category","Admin\CategoryController");
-Route::resource("admin-products","Admin\ProductController");
-Route::resource("admin-orders","Admin\OrderController");
+Route::get('logout', 'Auth\LoginController@logout');
+Route::resource("admin-products", "ProductController");
+Route::resource("admin-users", "Admin\UsersController");
+Route::resource("admin-category", "Admin\CategoryController");
+Route::resource("admin-products", "Admin\ProductController");
+Route::resource("admin-orders", "Admin\OrderController");
 
 /*Route::group(["middleware" => ["is_thisAdmin","auth"]],function (){
     Route::group(["namespace" => "Admin"], function (){
