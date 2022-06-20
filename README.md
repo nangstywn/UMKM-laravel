@@ -9,7 +9,8 @@
 6. `php artisan db:seed` method to run other seed classes.
 
 # Demo
-Visit Link : https://umkm-app.herokuapp.com/
+<!-- Visit Link : https://umkm-app.herokuapp.com/ -->
+Visit Link : <a href="https://umkm-app.herokuapp.com/" target="_blank">Aplikasi Promosi Produk UMKM</a>
 
 # Screenshot
   ### Landing Page
